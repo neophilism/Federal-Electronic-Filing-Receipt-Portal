@@ -4,7 +4,7 @@
   "roadmapVersion": 1,
   "planVerified": true,
   "plannedPrCount": 60,
-  "observedAt": "2026-10-14T00:00:00.000Z",
+  "observedAt": "2026-10-14T04:11:33Z",
   "sourceFiles": [
     "docs/DEVELOPMENT_PLAN.md",
     "docs/ARCHITECTURE.md",
@@ -15,7 +15,9 @@
       "id": "UFR-001",
       "title": "Canonical development plan and PR registry",
       "origin": "original",
-      "prs": [],
+      "prs": [
+        1
+      ],
       "priority": "P0",
       "phase": "F1",
       "dependsOn": [],
@@ -29,7 +31,8 @@
       "verification": [
         "Automated tests and reproducible evidence",
         "Review non-happy-path behavior and upstream reuse boundary"
-      ]
+      ],
+      "mappingEvidence": "Actual GitHub PR #1 on foundation branch; completion pending verified merge and acceptance."
     },
     {
       "id": "UFR-002",
@@ -1406,5 +1409,21 @@
       ]
     }
   ],
-  "pullRequests": []
+  "pullRequests": [
+    {
+      "id": 4852835698,
+      "number": 1,
+      "title": "UFR-001: canonical 60-unit roadmap and upstream-first architecture",
+      "url": "https://github.com/neophilism/Federal-Electronic-Filing-Receipt-Portal/pull/1",
+      "state": "open",
+      "draft": false,
+      "createdAt": "2026-10-14T04:11:33Z",
+      "updatedAt": "2026-10-14T04:11:33Z",
+      "closedAt": null,
+      "mergedAt": null,
+      "headSha": "59edd040528702a74f0cd4fc52683afb8784c85d",
+      "baseRef": "main",
+      "mergeCommitSha": "2109e427a3f2aa033174fb7ba9727c3ba9af47c5"
+    }
+  ]
 }
