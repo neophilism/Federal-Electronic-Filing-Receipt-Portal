@@ -1,0 +1,1410 @@
+{
+  "schemaVersion": 1,
+  "repository": "neophilism/Federal-Electronic-Filing-Receipt-Portal",
+  "roadmapVersion": 1,
+  "planVerified": true,
+  "plannedPrCount": 60,
+  "observedAt": "2026-10-14T00:00:00.000Z",
+  "sourceFiles": [
+    "docs/DEVELOPMENT_PLAN.md",
+    "docs/ARCHITECTURE.md",
+    "AGENTS.md"
+  ],
+  "units": [
+    {
+      "id": "UFR-001",
+      "title": "Canonical development plan and PR registry",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F1",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Canonical development plan and PR registry"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-002",
+      "title": "System architecture authority and threat model",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F1",
+      "dependsOn": [
+        "UFR-001"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "System architecture authority and threat model"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-003",
+      "title": "Application skeleton and CI",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F1",
+      "dependsOn": [
+        "UFR-001",
+        "UFR-002"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Application skeleton and CI"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-004",
+      "title": "Reusable engine integration contracts",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F1",
+      "dependsOn": [
+        "UFR-003"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Reusable engine integration contracts"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-005",
+      "title": "Federal legal policy and agency-domain registry",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F1",
+      "dependsOn": [
+        "UFR-002",
+        "UFR-003"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Federal legal policy and agency-domain registry"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-006",
+      "title": "Canonical receipt schema",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F2",
+      "dependsOn": [
+        "UFR-003"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Canonical receipt schema"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-007",
+      "title": "Authoritative time service",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F2",
+      "dependsOn": [
+        "UFR-006"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Authoritative time service"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-008",
+      "title": "Immutable original-submission manifest",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F2",
+      "dependsOn": [
+        "UFR-006"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Immutable original-submission manifest"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-009",
+      "title": "Atomic durable receipt transaction",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F2",
+      "dependsOn": [
+        "UFR-007",
+        "UFR-008"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Atomic durable receipt transaction"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-010",
+      "title": "Protected digital receipt signing",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F2",
+      "dependsOn": [
+        "UFR-009"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Protected digital receipt signing"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-011",
+      "title": "Public independent receipt verifier",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F2",
+      "dependsOn": [
+        "UFR-010"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Public independent receipt verifier"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-012",
+      "title": "Idempotent filing and retry protection",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F2",
+      "dependsOn": [
+        "UFR-009"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Idempotent filing and retry protection"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-013",
+      "title": "Durable receipt-event outbox",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F2",
+      "dependsOn": [
+        "UFR-009",
+        "UFR-012"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Durable receipt-event outbox"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-014",
+      "title": "Append-only cryptographic receipt ledger",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F2",
+      "dependsOn": [
+        "UFR-010",
+        "UFR-013"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Append-only cryptographic receipt ledger"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-015",
+      "title": "Unified public website shell",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F3",
+      "dependsOn": [
+        "UFR-003"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Unified public website shell"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-016",
+      "title": "Universal text-only filing",
+      "origin": "original",
+      "prs": [],
+      "priority": "P0",
+      "phase": "F3",
+      "dependsOn": [
+        "UFR-009",
+        "UFR-010",
+        "UFR-015"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Universal text-only filing"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-017",
+      "title": "Guided filing navigation",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F3",
+      "dependsOn": [
+        "UFR-005",
+        "UFR-016"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Guided filing navigation"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-018",
+      "title": "Guided statutory forms",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F3",
+      "dependsOn": [
+        "UFR-004",
+        "UFR-017"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Guided statutory forms"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-019",
+      "title": "Draft saving and recovery",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F3",
+      "dependsOn": [
+        "UFR-016"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Draft saving and recovery"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-020",
+      "title": "Receipt presentation and export",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F3",
+      "dependsOn": [
+        "UFR-010",
+        "UFR-011",
+        "UFR-016"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Receipt presentation and export"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-021",
+      "title": "Secure claimant status tracking",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F3",
+      "dependsOn": [
+        "UFR-004",
+        "UFR-016"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Secure claimant status tracking"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-022",
+      "title": "Amendments and supplementary filings",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F3",
+      "dependsOn": [
+        "UFR-008",
+        "UFR-020",
+        "UFR-021"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Amendments and supplementary filings"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-023",
+      "title": "Protected identity compartments",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F4",
+      "dependsOn": [
+        "UFR-004",
+        "UFR-016"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Protected identity compartments"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-024",
+      "title": "Staff authentication and authorization",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F4",
+      "dependsOn": [
+        "UFR-004",
+        "UFR-023"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Staff authentication and authorization"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-025",
+      "title": "Optional claimant accounts and recovery",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F4",
+      "dependsOn": [
+        "UFR-021",
+        "UFR-023"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Optional claimant accounts and recovery"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-026",
+      "title": "Durable encrypted document storage",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F4",
+      "dependsOn": [
+        "UFR-008",
+        "UFR-023"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Durable encrypted document storage"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-027",
+      "title": "Malware quarantine and document safety",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F4",
+      "dependsOn": [
+        "UFR-004",
+        "UFR-026"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Malware quarantine and document safety"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-028",
+      "title": "Resumable evidence uploads",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F4",
+      "dependsOn": [
+        "UFR-026",
+        "UFR-027"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Resumable evidence uploads"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-029",
+      "title": "Accessibility and low-bandwidth operation",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F4",
+      "dependsOn": [
+        "UFR-015",
+        "UFR-020"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Accessibility and low-bandwidth operation"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-030",
+      "title": "Language support and public assistance",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F4",
+      "dependsOn": [
+        "UFR-017",
+        "UFR-029"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Language support and public assistance"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-031",
+      "title": "Authoritative Federal agency directory",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F5",
+      "dependsOn": [
+        "UFR-005",
+        "UFR-004"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Authoritative Federal agency directory"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-032",
+      "title": "Automatic routing without intake veto",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F5",
+      "dependsOn": [
+        "UFR-013",
+        "UFR-031"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Automatic routing without intake veto"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-033",
+      "title": "Reliable interagency delivery worker",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F5",
+      "dependsOn": [
+        "UFR-032"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Reliable interagency delivery worker"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-034",
+      "title": "Reusable agency system adapters",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F5",
+      "dependsOn": [
+        "UFR-033"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Reusable agency system adapters"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-035",
+      "title": "Official electronic intake addresses",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F5",
+      "dependsOn": [
+        "UFR-009",
+        "UFR-026"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Official electronic intake addresses"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-036",
+      "title": "Existing official correspondence connectors",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F5",
+      "dependsOn": [
+        "UFR-035",
+        "UFR-031"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Existing official correspondence connectors"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-037",
+      "title": "Agency acknowledgments and correspondence",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F5",
+      "dependsOn": [
+        "UFR-004",
+        "UFR-033",
+        "UFR-021"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Agency acknowledgments and correspondence"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-038",
+      "title": "Routing deadlines and administrative escalation",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F5",
+      "dependsOn": [
+        "UFR-032",
+        "UFR-033",
+        "UFR-037"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Routing deadlines and administrative escalation"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-039",
+      "title": "Versioned statutory deadline engine",
+      "origin": "original",
+      "prs": [],
+      "priority": "P1",
+      "phase": "F6",
+      "dependsOn": [
+        "UFR-004",
+        "UFR-005",
+        "UFR-032"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Versioned statutory deadline engine"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-040",
+      "title": "Federal Tort Claims Act workflow",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F6",
+      "dependsOn": [
+        "UFR-018",
+        "UFR-039"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Federal Tort Claims Act workflow"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-041",
+      "title": "FOIA requests and appeals",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F6",
+      "dependsOn": [
+        "UFR-018",
+        "UFR-039"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "FOIA requests and appeals"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-042",
+      "title": "General administrative claims and appeals",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F6",
+      "dependsOn": [
+        "UFR-018",
+        "UFR-039"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "General administrative claims and appeals"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-043",
+      "title": "Defect notices cure and relation back",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F6",
+      "dependsOn": [
+        "UFR-022",
+        "UFR-039"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Defect notices cure and relation back"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-044",
+      "title": "Emergency matter triage",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F6",
+      "dependsOn": [
+        "UFR-032",
+        "UFR-038"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Emergency matter triage"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-045",
+      "title": "Legally consequential notice delivery",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F6",
+      "dependsOn": [
+        "UFR-037",
+        "UFR-039"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Legally consequential notice delivery"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-046",
+      "title": "Federated Federal court filing gateway",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F6",
+      "dependsOn": [
+        "UFR-010",
+        "UFR-011",
+        "UFR-015",
+        "UFR-029"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Federated Federal court filing gateway"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-047",
+      "title": "Protected and classified-content handling",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F6",
+      "dependsOn": [
+        "UFR-023",
+        "UFR-027",
+        "UFR-039"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Protected and classified-content handling"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-048",
+      "title": "Compliance Engine event integration",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F7",
+      "dependsOn": [
+        "UFR-004",
+        "UFR-014",
+        "UFR-038",
+        "UFR-039"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Compliance Engine event integration"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-049",
+      "title": "Independent receipt witnessing",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F7",
+      "dependsOn": [
+        "UFR-014",
+        "UFR-048"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Independent receipt witnessing"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-050",
+      "title": "Independent oversight dashboard",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F7",
+      "dependsOn": [
+        "UFR-048",
+        "UFR-049"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Independent oversight dashboard"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-051",
+      "title": "Public accountability dashboard",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F7",
+      "dependsOn": [
+        "UFR-048",
+        "UFR-050"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Public accountability dashboard"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-052",
+      "title": "Complaint and receipt-correction remedies",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F7",
+      "dependsOn": [
+        "UFR-021",
+        "UFR-048",
+        "UFR-050"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Complaint and receipt-correction remedies"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-053",
+      "title": "Federal records preservation and disposition",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F7",
+      "dependsOn": [
+        "UFR-026",
+        "UFR-048"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Federal records preservation and disposition"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-054",
+      "title": "Adversarial and insider-threat security testing",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F8",
+      "dependsOn": [
+        "UFR-010",
+        "UFR-024",
+        "UFR-048"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Adversarial and insider-threat security testing"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-055",
+      "title": "E2EESA and secure release validation",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F8",
+      "dependsOn": [
+        "UFR-004",
+        "UFR-023",
+        "UFR-026",
+        "UFR-054"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "E2EESA and secure release validation"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-056",
+      "title": "Abuse resilience without claimant exclusion",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F8",
+      "dependsOn": [
+        "UFR-016",
+        "UFR-027",
+        "UFR-054"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Abuse resilience without claimant exclusion"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-057",
+      "title": "High-availability intake and fallback",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F8",
+      "dependsOn": [
+        "UFR-009",
+        "UFR-013",
+        "UFR-026",
+        "UFR-033"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "High-availability intake and fallback"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-058",
+      "title": "Production observability and recovery",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F8",
+      "dependsOn": [
+        "UFR-055",
+        "UFR-057"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "shared-engine-candidate",
+      "scope": [
+        "Production observability and recovery"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-059",
+      "title": "Full-system release candidate acceptance",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F8",
+      "dependsOn": [
+        "UFR-029",
+        "UFR-040",
+        "UFR-041",
+        "UFR-042",
+        "UFR-043",
+        "UFR-045",
+        "UFR-046",
+        "UFR-047",
+        "UFR-049",
+        "UFR-050",
+        "UFR-052",
+        "UFR-053",
+        "UFR-056",
+        "UFR-058"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Full-system release candidate acceptance"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    },
+    {
+      "id": "UFR-060",
+      "title": "Government deployment and operational acceptance",
+      "origin": "original",
+      "prs": [],
+      "priority": "P2",
+      "phase": "F8",
+      "dependsOn": [
+        "UFR-059"
+      ],
+      "externalDependencies": [],
+      "externalPrerequisites": [],
+      "implementationOwner": "portal",
+      "scope": [
+        "Government deployment and operational acceptance"
+      ],
+      "acceptanceCriteria": "Implement verified behavior with negative-path, authorization, durability and dependency-failure tests appropriate to this unit; never claim legal authority or production acceptance without evidence.",
+      "verification": [
+        "Automated tests and reproducible evidence",
+        "Review non-happy-path behavior and upstream reuse boundary"
+      ]
+    }
+  ],
+  "pullRequests": []
+}
