@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portal PR registry root",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "repository",
+    "roadmapVersion",
+    "planVerified",
+    "plannedPrCount",
+    "observedAt",
+    "units",
+    "pullRequests"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "repository": {
+      "const": "neophilism/Federal-Electronic-Filing-Receipt-Portal"
+    },
+    "roadmapVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "planVerified": {
+      "type": "boolean"
+    },
+    "plannedPrCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "observedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "units": {
+      "type": "array"
+    },
+    "pullRequests": {
+      "type": "array"
+    }
+  }
+}
