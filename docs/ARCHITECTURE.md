@@ -2,7 +2,7 @@
 
 ## Public-facing system
 
-A single, accessible website for Federal administrative claims, notices, petitions and appeals, with separate judiciary-controlled integration where authorized. The project is presently a prototype and is not a government recipient.
+A single, accessible website for Federal administrative claims, notices, petitions and appeals, with separate judiciary-controlled integration where authorized. The project is presently a prototype and is not a government recipient. The normative authority, abuse, privacy, and dependency-failure boundaries are defined in [THREAT_MODEL.md](THREAT_MODEL.md).
 
 ## Invariants
 
