@@ -4,7 +4,7 @@
   "roadmapVersion": 1,
   "planVerified": true,
   "plannedPrCount": 60,
-  "observedAt": "2026-10-14T04:11:33Z",
+  "observedAt": "2026-10-15T06:30:22Z",
   "sourceFiles": [
     "docs/DEVELOPMENT_PLAN.md",
     "docs/ARCHITECTURE.md",
@@ -32,13 +32,15 @@
         "Automated tests and reproducible evidence",
         "Review non-happy-path behavior and upstream reuse boundary"
       ],
-      "mappingEvidence": "Actual GitHub PR #1 on foundation branch; completion pending verified merge and acceptance."
+      "mappingEvidence": "Actual GitHub PR #1 squash-merged as 147fbad190a99abb9b655f61a13691572abcc698 after exact-head and merged-main Foundation checks passed."
     },
     {
       "id": "UFR-002",
       "title": "System architecture authority and threat model",
       "origin": "original",
-      "prs": [],
+      "prs": [
+        2
+      ],
       "priority": "P0",
       "phase": "F1",
       "dependsOn": [
@@ -54,7 +56,8 @@
       "verification": [
         "Automated tests and reproducible evidence",
         "Review non-happy-path behavior and upstream reuse boundary"
-      ]
+      ],
+      "mappingEvidence": "Actual GitHub PR #2; completion pending exact-head validation, review, and verified merge."
     },
     {
       "id": "UFR-003",
@@ -1415,15 +1418,28 @@
       "number": 1,
       "title": "UFR-001: canonical 60-unit roadmap and upstream-first architecture",
       "url": "https://github.com/neophilism/Federal-Electronic-Filing-Receipt-Portal/pull/1",
-      "state": "open",
+      "state": "closed",
       "draft": false,
       "createdAt": "2026-10-14T04:11:33Z",
-      "updatedAt": "2026-10-14T04:11:33Z",
+      "updatedAt": "2026-10-15T06:28:06Z",
+      "closedAt": "2026-10-15T06:28:06Z",
+      "mergedAt": "2026-10-15T06:28:06Z",
+      "headSha": "9471ae00445601363ca73d8def8847020c587a17",
+      "baseRef": "main",
+      "mergeCommitSha": "147fbad190a99abb9b655f61a13691572abcc698"
+    },
+    {
+      "id": 4869216529,
+      "number": 2,
+      "title": "UFR-002: define authority boundaries and threat model",
+      "url": "https://github.com/neophilism/Federal-Electronic-Filing-Receipt-Portal/pull/2",
+      "state": "open",
+      "draft": true,
+      "createdAt": "2026-10-15T06:30:22Z",
+      "updatedAt": "2026-10-15T06:30:22Z",
       "closedAt": null,
       "mergedAt": null,
-      "headSha": "59edd040528702a74f0cd4fc52683afb8784c85d",
-      "baseRef": "main",
-      "mergeCommitSha": "2109e427a3f2aa033174fb7ba9727c3ba9af47c5"
+      "baseRef": "main"
     }
   ]
 }
