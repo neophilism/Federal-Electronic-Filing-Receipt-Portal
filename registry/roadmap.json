@@ -1,0 +1,6 @@
+{
+  "repository": "neophilism/Federal-Electronic-Filing-Receipt-Portal",
+  "deprecated": true,
+  "redirectTo": "registry/prs.json",
+  "instructions": "Retired duplicate plan. Only registry/prs.json is active; consumers use that path directly."
+}

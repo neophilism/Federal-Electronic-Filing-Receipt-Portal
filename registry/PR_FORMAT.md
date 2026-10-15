@@ -1,0 +1,1 @@
+Canonical registry: registry/prs.json; schemaVersion=1; use the shared Boardroom/Engine Room PR contract. Never maintain a second milestone source. Validate with scripts/validate-pr-registry.mjs.

@@ -1,0 +1,14 @@
+{
+  "name": "federal-electronic-filing-receipt-portal",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "validate:registry": "node scripts/validate-pr-registry.mjs",
+    "check": "npm run validate:registry && npm test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
