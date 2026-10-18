@@ -10,7 +10,15 @@ This is the Federal-specific downstream application of the [Secure Intake & Case
 
 Federal-specific statutory policy, agency directory configuration, public presentation, and authorized agency/judiciary connectors belong here.
 
-**Development plan:** `docs/DEVELOPMENT_PLAN.md` (to be added in the first PR).  
-**Canonical PR registry:** `registry/prs.json` (to be added in the first PR).
+**Development plan:** `docs/DEVELOPMENT_PLAN.md`.  
+**Canonical PR registry:** `registry/prs.json`.
+
+## Prototype health contract
+
+`npm run check` validates the plan and runs the Node tests. `npm start` serves
+`GET /api/health`, a version 1 JSON liveness response with
+`authority: "prototype-only"` and `filingsAccepted: false`. Other paths do not
+accept filings. This endpoint does not test external dependencies or grant filing
+authority.
 
 Never represent a demonstration receipt as evidence of receipt by the United States Government.

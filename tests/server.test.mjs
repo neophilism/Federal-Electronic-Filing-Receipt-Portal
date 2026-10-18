@@ -4,7 +4,7 @@ import { healthResponse } from "../src/health.mjs";
 import { createPortalServer } from "../src/server.mjs";
 test("health explicitly disclaims filing authority",()=>{
  const response=healthResponse("/api/health","GET");
- assert.equal(response.status,200);assert.equal(response.body.filingsAccepted,false);
+ assert.equal(response.status,200);assert.equal(response.body.filingsAccepted,false);assert.equal(response.body.schemaVersion,1);
  assert.equal(response.body.authority,"prototype-only");
 });
 test("unknown routes and unsafe methods fail closed",()=>{
