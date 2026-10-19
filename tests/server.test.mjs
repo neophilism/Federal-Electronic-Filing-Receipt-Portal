@@ -23,6 +23,14 @@ test("unknown routes, unsafe methods and malformed request targets fail closed",
   assert.equal(routePath("http://other.example/api/health").status, 400);
   assert.equal(routePath("//other.example/api/health").status, 400);
   assert.equal(routePath("/api/health?claimant=123").status, 400);
+  for (const input of [
+    "/api/health?", "/api/health#", "/api/x/../health",
+    "/api/health/../health", "/api/%2e%2e/api/health",
+    "/api/health/./", "/api/health%2f"
+  ]) {
+    const result = routePath(input);
+    assert.notEqual(result.path, "/api/health");
+  }
   assert.equal(routePath("/" + "a".repeat(2049)).status, 414);
 });
 

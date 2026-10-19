@@ -11,7 +11,8 @@ export function routePath(raw) {
   if (raw.length > 2048) return { status: 414, error: "request_target_too_long" };
   try {
     const url = new URL(raw, "http://portal.invalid");
-    if (url.origin !== "http://portal.invalid" || url.search || url.hash) {
+    if (url.origin !== "http://portal.invalid" || url.search || url.hash ||
+        url.pathname !== raw) {
       return { status: 400, error: "invalid_request_target" };
     }
     return { path: url.pathname };
