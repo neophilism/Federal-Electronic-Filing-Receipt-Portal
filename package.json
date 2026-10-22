@@ -4,9 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "node src/server.mjs",
     "test": "node --test",
+    "build": "node --check src/health.mjs && node --check src/server.mjs",
     "validate:registry": "node scripts/validate-pr-registry.mjs",
-    "check": "npm run validate:registry && npm test"
+    "check": "npm run validate:registry && npm run build && npm test"
   },
   "engines": {
     "node": ">=22"
