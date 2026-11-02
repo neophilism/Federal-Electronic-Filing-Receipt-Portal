@@ -9,7 +9,7 @@ The portal remains a development prototype. A website's domain, a reviewed direc
 - `createAgencyRegistry` accepts UTF-8 JSON bytes, a trusted expected SHA-256 and a minimum revision. `loadAgencyRegistry` bounds actual file reads to 256 KiB and conceals filesystem diagnostics. There is no network lookup or redirect following in either API.
 - `lookup` matches an exact reviewed hostname. It does not infer subdomain ownership, accept lookalike suffixes, or treat a URL as a filing endpoint. It returns no claimant data and never reports filing acceptance.
 
-The canonical configuration encoding is `JSON.stringify(data, null, 2) + "\\n"`. Duplicate members, unsupported fields, malformed UTF-8, oversized input, ambiguous/conflicting domains and lossy JSON encodings fail validation. Registry and record review intervals are bounded to 31 days; this is an engineering review horizon, not a statutory period. Observed/verified times cannot be in the future. Time rollback cannot revive an expired snapshot.
+The canonical configuration encoding is `JSON.stringify(data, null, 2) + "\n"`. Duplicate members, unsupported fields, malformed UTF-8, oversized input, ambiguous/conflicting domains and lossy JSON encodings fail validation. Registry and record review intervals are bounded to 31 days; this is an engineering review horizon, not a statutory period. Observed/verified times cannot be in the future. Time rollback cannot revive an expired snapshot.
 
 Agency IDs are portal-local registry identifiers, not FOIA.gov component IDs. The UFR-031 directory unit must establish any complete component mapping. No fixed or inferred total agency count is used.
 
