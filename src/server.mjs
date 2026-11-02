@@ -1,3 +1,4 @@
+import { publicShellResponse } from "./public-shell.mjs";
 import { createServer } from "node:http";
 import { pathToFileURL } from "node:url";
 import { healthResponse, readinessResponse } from "./health.mjs";
@@ -57,17 +58,19 @@ export function createPortalServer({ agencyRegistry = null, clock = Date.now } =
         }
       }
     } else {
-      response = { status: 404, body: { error: "not_found" } };
+      response = publicShellResponse(target.path, req.method, { agencyRegistry, clock })
+        ?? { status: 404, body: { error: "not_found" } };
     }
     res.writeHead(response.status, {
-      "content-type": "application/json; charset=utf-8",
+      "content-type": response.contentType ?? "application/json; charset=utf-8",
       "cache-control": "no-store",
       "x-content-type-options": "nosniff",
       "referrer-policy": "no-referrer",
-      "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
-      ...(response.status === 405 ? { allow: "GET" } : {}),
+      "content-security-policy": "default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      ...(response.status === 405 ? { allow: response.allow ?? "GET" } : {}),
     });
-    res.end(JSON.stringify(response.body));
+    res.end(response.headOnly ? undefined : response.rawBody ?? JSON.stringify(response.body));
   });
   server.headersTimeout = 10000;
   server.requestTimeout = 10000;
@@ -96,4 +99,3 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   }
   createPortalServer({ agencyRegistry }).listen(port, host);
 }
-
