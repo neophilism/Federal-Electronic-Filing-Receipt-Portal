@@ -28,3 +28,9 @@ Never represent a demonstration receipt as evidence of receipt by the United Sta
 
 See [agency policy and configuration](docs/AGENCY_POLICY.md) for trusted pin/revision settings, primary sources, exact-host matching, expiry and startup behavior. The optional reviewed sample lists only `www.justice.gov` from its USAGov entry; it is not a complete Federal directory or an authorized intake route.
 
+
+## Public website shell
+
+Open `http://127.0.0.1:3000/` after `npm start`. The overview, `/agencies`, `/help`, `/privacy` and `/about` pages are server-rendered HTML with a local stylesheet. They work without JavaScript or an account. The directory uses only a configured current registry and otherwise displays a truthful unavailable state. There is no filing form, upload, tracking lookup or government receipt.
+
+The presentation contract, security review, negative HTTP tests and verification limits are recorded in [UFR-015 evidence](docs/evidence/UFR-015.md). Public pages support GET/HEAD; API method contracts remain separate. No arbitrary filesystem resources or SPA fallback are served.
