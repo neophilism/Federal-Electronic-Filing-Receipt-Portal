@@ -1,0 +1,18 @@
+{
+  "schema": "ufr-agency-domains-v1",
+  "revision": 1,
+  "authorityMode": "prototype",
+  "observedAt": "2026-11-02T00:23:00.000Z",
+  "expiresAt": "2026-12-01T00:23:00.000Z",
+  "agencies": [
+    {
+      "agencyId": "us-doj",
+      "name": "U.S. Department of Justice",
+      "domains": [
+        "www.justice.gov"
+      ],
+      "sourceUrl": "https://www.usa.gov/agencies/u-s-department-of-justice",
+      "verifiedAt": "2026-11-02T00:23:00.000Z"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.mjs",
     "test": "node --test",
-    "build": "node --check src/health.mjs && node --check src/server.mjs",
+    "build": "node --check src/health.mjs && node --check src/server.mjs && node --check src/policy/agency-registry.mjs && node --check src/policy/federal-policy.mjs",
     "validate:registry": "node scripts/validate-pr-registry.mjs",
     "check": "npm run validate:registry && npm run build && npm test"
   },
@@ -14,3 +14,4 @@
     "node": ">=22"
   }
 }
+
